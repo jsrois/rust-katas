@@ -8,7 +8,7 @@ impl Password for String {
             self.chars().any(|c| c.is_lowercase()) &&
             self.chars().any(|c: char| c.is_uppercase()) &&
             self.chars().any(|c: char| c.is_numeric()) &&
-            self.chars().any(|c: char| ['!','@','#','$','%','^','&','*'].contains(&c))
+            self.chars().any(|c: char| "!@#$%^&*".contains(c))
     }
 }
 
